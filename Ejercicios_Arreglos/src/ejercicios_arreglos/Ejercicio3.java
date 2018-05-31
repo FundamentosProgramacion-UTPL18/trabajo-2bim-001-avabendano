@@ -12,20 +12,22 @@ package ejercicios_arreglos;
 public class Ejercicio3 {
 
     public static void main(String[] args) {
+        //iniciar variables
         double[] calificaciones_programacion = {18, 19, 15, 16, 17, 10};
         double[] calificaciones_bd = {10, 12, 13, 20, 17, 10};
         double[] promedios = new double[6];
-        String cadena = "";
+        String cadena = ""; // valor incial
         int estudiantes = 0;
         for (int contador = 0; contador < calificaciones_bd.length; contador++) {
             double suma = calificaciones_programacion[contador] + calificaciones_bd[contador];
             double promedio = suma / 2;
-            //System.out.println("Estudiante %d\t%f\%f\%f", contador,);
+           // Ingresar los valores al arreglo promedios
             promedios[contador] = promedio;
 
         }
         for (int contador = 0; contador < calificaciones_programacion.length; contador++) {
             estudiantes = estudiantes + 1;
+            // concatenacion final
             cadena = String.format("%s%s %-15d%-15.2f%-15.2f%.2f\n", cadena, "Estudiante", estudiantes, calificaciones_programacion[contador],
                     calificaciones_bd[contador], promedios[contador]);
 
